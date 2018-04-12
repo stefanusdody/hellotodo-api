@@ -27,6 +27,9 @@ app.get("/todo", (req, res) => {
   res.send({ data: todoList });
 });
 
+app.get('/', (req, res) => {
+  res.send("hello")
+})
 app.get("/todo/:id", (req, res) => {
   let length = todoList.length;
   let index = req.params.id;
