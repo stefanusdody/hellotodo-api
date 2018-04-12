@@ -2,6 +2,8 @@ const cors = require("cors")
 const express = require("express");
 const app = express();
 var bodyParser = require("body-parser");
+
+var PORT= process.env.PORT || 3000
 // body-Parser umumnya digunakan dalam form yang membutuhkan banyak object
 // params umumny digunakan dalam id
 
@@ -65,4 +67,4 @@ app.delete("/todo/:id", (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
